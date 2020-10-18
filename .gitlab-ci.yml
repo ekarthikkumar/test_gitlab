@@ -1,7 +1,6 @@
 default:
   image: python:2.7
   before_script:
-    - sudo yum update
     - python --version
     - which python
     - sudo pip install requests
