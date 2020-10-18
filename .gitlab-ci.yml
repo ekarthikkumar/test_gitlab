@@ -1,0 +1,11 @@
+default:
+  image: python:2.7
+  before_script:
+    - yum update
+    - python --version
+    - which python
+    - pip install requests
+
+test:
+  script:
+    - python test_pyscript.py
