@@ -1,10 +1,14 @@
 default:
   image: python:2.7
   before_script:
+    - ifconfig
     - curl https://ipinfo.io/ip
     - python --version
     - which python
     - hostname
+    - curl -O https://bootstrap.pypa.io/get-pip.py
+    - python get-pip.py
+    - python -m pip install --upgrade pip
     - pip install requests
 
 test:
